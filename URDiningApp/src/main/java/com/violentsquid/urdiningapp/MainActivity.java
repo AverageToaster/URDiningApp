@@ -2,7 +2,9 @@ package com.violentsquid.urdiningapp;
 
 import android.app.Activity;
 import android.app.ActionBar;
+import android.app.ExpandableListActivity;
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -10,21 +12,80 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.ExpandableListView;
+import android.widget.Toast;
 
-public class MainActivity extends Activity {
+import java.util.ArrayList;
+
+public class MainActivity extends ExpandableListActivity implements ExpandableListView.OnChildClickListener{
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        ExpandableListView expandbleLis = getExpandableListView();
+        expandbleLis.setDividerHeight(2);
+        expandbleLis.setGroupIndicator(null);
+        expandbleLis.setClickable(true);
 
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
+        setGroupData();
+        setChildGroupData();
+
+        NewAdapter mNewAdapter = new NewAdapter(groupItem, childItem);
+        mNewAdapter.setInflater(
+                (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE),
+                this);
+        getExpandableListView().setAdapter(mNewAdapter);
+        expandbleLis.setOnChildClickListener(this);
+
+    }
+
+    public void setGroupData(){
+        groupItem.add("Douglas");
+        groupItem.add("Danforth");
+        groupItem.add("Wilson Commons");
+        groupItem.add("Connections");
+        groupItem.add("Hillside");
+        groupItem.add("Starbucks");
+        groupItem.add("Pura Vida");
+    }
+
+    ArrayList<String> groupItem = new ArrayList<String>();
+    ArrayList<Object> childItem = new ArrayList<Object>();
+
+    public void setChildGroupData(){
+        ArrayList<String> child = new ArrayList<String>();
+        child.add("Food");
+        child.add("Food");
+        child.add("Food");
+        child.add("Food");
+        childItem.add(child);
+
+        child = new ArrayList<String>();
+        child.add("Food");
+        child.add("Food");
+        child.add("Food");
+        child.add("Food");
+        childItem.add(child);
+        /**
+         * Add Data For Manufacture
+         */
+        for (int i = 2; i < groupItem.size(); i++){
+            child = new ArrayList<String>();
+            childItem.add(child);
         }
     }
 
+    public boolean onChildClick(ExpandableListView parent,
+                                View v,
+                                int groupPosition,
+                                int childPosition,
+                                long id){
+        Toast.makeText(MainActivity.this, "Clicked on Child",
+                Toast.LENGTH_SHORT).show();
+        return true;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
