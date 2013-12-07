@@ -1,0 +1,121 @@
+{
+   "dininghalls":[
+      {
+         "location":"Danforth",
+         "open":"2013-12-07T11:00",
+         "close":"2013-12-07T21:00",
+         "stations":[
+            {
+               "name":"Bistro Home Zone",
+               "food":[
+                  "Grilled Bbq Pork Chops",
+                  "Maple Mashed Sweet Potatoes"
+               ]
+            },
+            {
+               "name":"Brick Oven",
+               "food":[
+                  "Classic Cheese Pizza",
+                  "Sausage Pizza"
+               ]
+            },
+            {
+               "name":"Deli\/change",
+               "food":[
+                  "Signature Chips"
+               ]
+            },
+            {
+               "name":"Dessert",
+               "food":[
+                  "Chocolate Chip Cookie",
+                  "Oatmeal Raisin Cookie"
+               ]
+            },
+            {
+               "name":"Grill",
+               "food":[
+                  "Grilled Herb Chicken Sandwich",
+                  "Crispy French Fries"
+               ]
+            },
+            {
+               "name":"Hibachi Grill",
+               "food":[
+                  "Sweet Chili Tofu Stir-Fry"
+               ]
+            },
+            {
+               "name":"Produce Market",
+               "food":[
+                  "Cranberry-Apple Couscous Salad",
+                  "Homestyle Macaroni Salad",
+                  "Salad Bar"
+               ]
+            },
+            {
+               "name":"Saute",
+               "food":null
+            },
+            {
+               "name":"Soup",
+               "food":null
+            },
+            {
+               "name":"Vegan",
+               "food":[
+                  "Thai Tofu Stir-Fry",
+                  "Gardenburger"
+               ]
+            }
+         ]
+      },
+      {
+         "location":"Douglass",
+         "open":"2013-12-07T11:00",
+         "close":"2013-12-07T21:00",
+         "stations":[
+            {
+               "name":"Dessert",
+               "food":null
+            },
+            {
+               "name":"Grill",
+               "food":null
+            },
+            {
+               "name":"Home Zone",
+               "food":null
+            },
+            {
+               "name":"Noodle Bowl",
+               "food":null
+            },
+            {
+               "name":"Pizza",
+               "food":null
+            },
+            {
+               "name":"Soup",
+               "food":null
+            }
+         ]
+      },
+      {
+        "location":"Starbucks",
+        "open":"2013-12-07T10:00",
+        "close":"2013-12-08T01:00"
+      }
+   ],
+   "events":[
+      {
+         "title":"RocHack Presents Food",
+         "open":"2013-12-07T15:00",
+         "close":"2013-12-07T17:00",
+         "location":"B&L 209",
+         "description":"YO WE SERVIN STUFF",
+         "hostedby":"RocHack",
+         "cost":0.00
+      }
+   ]
+}
