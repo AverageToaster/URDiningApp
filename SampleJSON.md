@@ -26,6 +26,7 @@ JSON Format
             "location": "B&L 209",
             "description": "YO WE SERVIN STUFF",
             "hostedby": "RocHack"
+            "cost": 0.00
         }
     }
 }
