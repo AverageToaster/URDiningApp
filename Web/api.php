@@ -148,7 +148,7 @@ class EventItem {
     public $cost;
 }
 
-giveTJInfo();
+echo giveTJInfo();
 
 function giveTJInfo() {
     $hour = date('G');
@@ -169,9 +169,8 @@ function giveTJInfo() {
     $events = get_events($day);
 
     $final = array(dininghalls => $dining, events => $events);
-    var_dump($final);
 
-    return json_encode(array(dininghalls => $dining, events => $events));
+    return json_encode($final);
 }
 
 ?>
